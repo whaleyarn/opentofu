@@ -5,7 +5,7 @@ on:
 
 env:
   IMAGE_NAME: ghcr.io/${{ github.repository }}
-  VERSION: 1.11.2
+  VERSION: 1.11.3
 
 jobs:
   build-and-push:

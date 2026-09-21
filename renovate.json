@@ -3,12 +3,18 @@
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": ["^\\.github/workflows/.*\\.ya?ml$"],
-      "matchStrings": ["VERSION: (?<currentValue>\\d+\\.\\d+\\.\\d+)"],
+      "fileMatch": [
+        "^\\.github/workflows/.*\\.ya?ml$"
+      ],
+      "matchStrings": [
+        "VERSION: (?<currentValue>\\d+\\.\\d+\\.\\d+)"
+      ],
       "depNameTemplate": "opentofu/opentofu",
       "datasourceTemplate": "github-releases",
       "extractVersionTemplate": "^v(?<version>.*)$"
     }
   ],
-  "extends": [":automergeMinor"]
+  "automerge": true,
+  "platformAutomerge": false,
+  "ignoreTests": false
 }
